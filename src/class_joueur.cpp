@@ -1,14 +1,32 @@
-#include "joueur.hpp"
+#include <iostream>
+#include <string>
+
+#include "class_joueur.hpp"
 
 using  namespace std ;
+
+JOUEUR::JOUEUR()
+{
+
+}
+
+JOUEUR::~JOUEUR()
+{
+    
+}
 
 void JOUEUR::set_nom(string nom)
 {
     this->nom = nom ;
 }
 
-void JOUEUR::set_id(int id)
+int JOUEUR::get_id()
 {
+    return this->id;
+}
+
+void JOUEUR::set_id(int id)
+{ 
     this->id += 1 ; 
 }
 

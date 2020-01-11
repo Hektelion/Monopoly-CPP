@@ -82,7 +82,7 @@ void ETAT_MODIFIER_PARTIE::HandleEvents(CGameEngine* game)
 				{
 					//CLIC SUR LA ZONE COULEUR DU JOUEUR SELECTIONNE
 					cout << "Appui la zone couleur du joueur selectionné" << endl;
-				}
+				} 
 				break;
 
 			case SDL_KEYDOWN:

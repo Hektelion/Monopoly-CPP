@@ -5,11 +5,13 @@
 #include <string>
 #include <SDL2/SDL.h>
 
+using namespace std;
+
 class JOUEUR
 {
 private:
 
-    std::string nom;
+    string nom;
     int id;
     int position;
     int argent;
@@ -20,11 +22,15 @@ private:
     int service_possede;
     int gare_possede;
     SDL_Color couleur;
-
+ 
 public:
 
-    void set_nom(std::string nom );
+    JOUEUR();
+    ~JOUEUR();
+
+    void set_nom(string nom );
     void set_id(int id);
+    int get_id();
     void set_argent(int argent);
     void set_est_fauche(bool est_fauche);
     void set_est_en_prison(bool est_en_prison);
@@ -33,7 +39,7 @@ public:
     void set_carte_sortie_prison(bool carte_sortie_prison);
     void set_nb_gares(int nb_gare);
     void set_nb_service(int nb_service);
-    std::string get_nom();
+    string get_nom();
     int get_position();
     int get_argent();
     bool get_est_fauche();

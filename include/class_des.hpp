@@ -1,6 +1,6 @@
 #ifndef DES_HPP
 #define DES_HPP
-
+ 
 class DES
 {
 

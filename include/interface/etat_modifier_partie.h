@@ -1,4 +1,4 @@
-
+ 
 #ifndef ETAT_MODIFIER_PARTIE_H
 #define ETAT_MODIFIER_PARTIE_H
 

@@ -1,6 +1,6 @@
 #ifndef CONSTANT_H
 #define CONSTANT_H
-
+ 
 #include <SDL2/SDL.h>
 
 //couleur interface

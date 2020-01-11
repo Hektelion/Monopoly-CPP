@@ -1,7 +1,7 @@
 #include <iostream>
-#include "carte.hpp"
+#include "class_carte.hpp"
 
 void CARTE::effet_carte()
 {
   //Action
-}
+} 

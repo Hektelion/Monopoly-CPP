@@ -6,13 +6,14 @@
 CC = g++
 LDFLAGS = 
 CFLAGS = -W -Wall -I./include -I./include/interface
-EXEC = mono_poly
+EXEC = monopoly
+EXEC_TEST_CONSOLE = monopoly_test_console
 
 #LISTE FICHIER INCLU
 INCLUDE = $(wildcard include/*.hpp)
 
 #LISTE FICHIER SOURCE
-SRC = $(wildcard src/*.cpp)
+SRC = $(wildcard src/class_*.cpp)
 INTERFACE_SRC = $(wildcard src/interface/*.cpp)
 
 #LISTE FICHIER OBJET
@@ -21,11 +22,20 @@ INTERFACE_OBJ = $(patsubst src/interface/%.cpp, obj/interface/%.o, $(INTERFACE_S
 
 ####################################################
 
-all	: $(EXEC)
+all	: $(EXEC) $(EXEC_TEST_CONSOLE)
 	@echo "DONE"
 
-$(EXEC)	: $(OBJ) $(INTERFACE_OBJ)
+$(EXEC)	: $(OBJ) ./obj/main.o $(INTERFACE_OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS) `sdl2-config --libs`
+
+$(EXEC_TEST_CONSOLE) : $(OBJ) ./obj/main_console.o
+	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS)
+
+obj/main_console.o : src/main_console.cpp
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+obj/main.o : src/main.cpp
+	$(CC) -o $@ -c $< $(CFLAGS)
 
 obj/%.o:src/%.cpp
 	$(CC) -o $@ -c $< $(CFLAGS)
@@ -38,11 +48,12 @@ obj/interface/%.o : src/interface/%.cpp
 
 .PHONY	: clean mrproper
 
-clean	:
+clean	: 
 	rm -f obj/*.o
+	rm -f obj/interface/*.o
 
 mrproper: clean
-	rm -rf $(EXEC)
+	rm -rf $(EXEC) $(EXEC_TEST_CONSOLE)
 
 print-%  : ; @echo $* = $($*)
 

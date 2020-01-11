@@ -1,12 +1,12 @@
 #ifndef CASE_HPP
 #define CASE_HPP
-
+ 
 #include <iostream>
 #include <string>
 
 #include <SDL2/SDL.h>
 
-#include "joueur.hpp"
+#include "class_joueur.hpp"
 
 using namespace std;
 

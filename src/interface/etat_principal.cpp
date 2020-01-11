@@ -15,7 +15,7 @@ ETAT_PRINCIPAL ETAT_PRINCIPAL::m_ETAT_PRINCIPAL;
 void ETAT_PRINCIPAL::Init()
 {
 	cout << "Menu principal Init" << endl;
-}
+} 
 
 void ETAT_PRINCIPAL::Cleanup()
 {

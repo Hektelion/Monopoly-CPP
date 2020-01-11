@@ -1,11 +1,11 @@
-#include "case.hpp"
+#include "class_case.hpp"
 
 using namespace std;
 
 void CASE::set_id(int id)
 {
     id = id;
-}
+} 
 
 void CASE::set_nom(string nom)
 {
@@ -21,12 +21,6 @@ string CASE::get_nom()
 {
     return nom_case;
 }
-
-
-
-
-
-
 
 void CASE_TERRAIN::set_proprietaire(JOUEUR proprietaire)
 {

@@ -1,4 +1,4 @@
-#include <des.hpp>
+#include <class_des.hpp>
 
 #include <random>
 #include <iostream>
@@ -10,11 +10,11 @@ DES::DES()
     d1 = 0;
     d2 = 0;
     tot = 0;
-}
+} 
 
 DES::~DES()
 {
-    cout << "suppression dés" << endl;
+    
 }
 
 void DES::lancer()

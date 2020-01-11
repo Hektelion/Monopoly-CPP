@@ -49,7 +49,7 @@ void CGameEngine::Init(const char* title, int width, int height, int bpp, bool f
 	else
 	{
 		printf("Moteur de rendu initialisé\n");
-	}
+	} 
 	
 	m_fullscreen = fullscreen;
 	m_running = true;
